@@ -1,0 +1,18 @@
+[project]
+name = "Code"
+version = "0.1.0"
+description = "Add a short description here"
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tasks]
+day1 = "python Day01.py"
+day2 = "python Day02.py"
+day3 = "python Day03.py"
+day3-2 = "python Day03_2.py"
+day4 = "python Day04.py"
+
+[dependencies]
+python = "3.12.0.*"
+numpy = "1.26.2.*"
+pandas = "2.1.3.*"
