@@ -6,12 +6,18 @@ lines = contents.split(sep="\n")
 seed = lines[0].split(sep=" ")
 del(seed[0])
 
+for i in range(len(seed)):
+    seed[i] = int(seed[i])
+
 def maps(s):
     output = []
     i = lines.index(s) + 1
     while lines[i] != "":
         output.append(lines[i].split(sep=" "))
-        i+= 1
+        i += 1
+    for j in range(len(output)):
+        for k in range(len(output[j])):
+            output[j][k] = int(output[j][k])
     return output
     
 seed_to_soil = maps("seed-to-soil map:")
@@ -28,14 +34,15 @@ def map_it(x, x_to_y):
     index_added = []
     for i in range(len(x_to_y)):
         for j in range(len(x)):
-            if int(x[j]) >= int(x_to_y[i][1]) and int(x[j]) <= int(x_to_y[i][2]) + int(x_to_y[i][1]):
-                add = int(x[j]) - int(x_to_y[i][1]) + int(x_to_y[i][0])
+            if x[j] >= x_to_y[i][1] and x[j] <= x_to_y[i][2] + x_to_y[i][1]:
+                add = x[j] - x_to_y[i][1] + x_to_y[i][0]
                 y.append(add)
                 index_added.append(j)
     
     for j in range(len(x)):
         if j not in index_added:
-            y.append(int(x[j]))
+            y.append(x[j])
+            
     return y
     
 soil = map_it(seed, seed_to_soil)

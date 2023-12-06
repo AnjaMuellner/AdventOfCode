@@ -52,6 +52,26 @@ package:
   size: 154700
   timestamp: 1700281021312
 - platform: win-64
+  name: emoji
+  version: 2.9.0
+  category: main
+  manager: conda
+  dependencies:
+  - python >=2.7
+  url: https://conda.anaconda.org/conda-forge/noarch/emoji-2.9.0-pyhd8ed1ab_0.conda
+  hash:
+    md5: 8a4a1d723269fb9c7166fd2478d395b5
+    sha256: f950a29a1d2f1ea77e84b0f9f2f60100725299def7ba3a7ad429fa17a713e3b8
+  build: pyhd8ed1ab_0
+  arch: x86_64
+  subdir: win-64
+  build_number: 0
+  license: BSD-3-Clause
+  license_family: BSD
+  noarch: python
+  size: 302949
+  timestamp: 1701816245730
+- platform: win-64
   name: intel-openmp
   version: 2023.2.0
   category: main
@@ -496,6 +516,27 @@ package:
   license_family: BSD
   size: 6785
   timestamp: 1695147430513
+- platform: win-64
+  name: pythonji
+  version: 0.1.1
+  category: main
+  manager: conda
+  dependencies:
+  - emoji
+  - python >=3.6
+  url: https://conda.anaconda.org/conda-forge/noarch/pythonji-0.1.1-pyhd8ed1ab_0.conda
+  hash:
+    md5: 2b2fdbc63b902982d467d1689e13d81d
+    sha256: a9f268b0f02356ecdbb6cac2d05a9fdae51c917c4a4c7a48b19047fc0011d8ce
+  build: pyhd8ed1ab_0
+  arch: x86_64
+  subdir: win-64
+  build_number: 0
+  license: MIT
+  license_family: MIT
+  noarch: python
+  size: 10399
+  timestamp: 1701677367389
 - platform: win-64
   name: pytz
   version: 2023.3.post1

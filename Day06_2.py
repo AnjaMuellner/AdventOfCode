@@ -25,10 +25,10 @@ dist = int(dist)
 # print(time)
 # print(dist)
 
-sol = []
+sol = 0
 
 for j in range(time):
     if j * (time - j) > dist:
-        sol.append(1)
+        sol += 1
 
-print(sum(sol))
+print(sol)
