@@ -9,10 +9,11 @@ platforms = ["win-64"]
 day1 = "python Day01.py"
 day2 = "python Day02.py"
 day3 = "python Day03.py"
-day3-2 = "python Day03_2.py"
+day3-2-emoji = "python -m pythonji Day3️⃣_2️⃣.🐍"
 day4 = "python Day04.py"
 
 [dependencies]
 python = "3.12.0.*"
 numpy = "1.26.2.*"
 pandas = "2.1.3.*"
+pythonji = "0.1.1.*"
