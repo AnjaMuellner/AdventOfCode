@@ -2,7 +2,7 @@ import re
 import math
 import time
 start_time = time.time()
-with open("Day08.txt", "r") as f:
+with open("Day08_Jensi.txt", "r") as f:
     contents = f.read()
     
 lines = contents.split(sep="\n")
@@ -12,17 +12,15 @@ instructions = lines[0]
 pattern = r"([A-Z]{3})"
 
 maps = []
-i = 2
-while i < len(lines):
-    matches = re.findall(pattern, lines[i])
+for line in lines[2:]:
+    matches = re.findall(pattern, line)
     maps.append(matches)
-    i += 1
     
 # print(maps)
 starts = []
-for i in range(len(maps)):
-    starts.append(maps[i][0])
-    del(maps[i][0])
+for map in maps:
+    starts.append(map[0])
+    del(map[0])
 
 # print(start)
 
