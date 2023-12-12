@@ -19,10 +19,10 @@ for j in range(len(boo)):
     if boo[j] == 0:
         boo_indices.append(j)
 
-dot_row = []
+dot_col = []
 for j in range(len(lines[0])):
     if j in boo_indices:
-        dot_row.append(j)
+        dot_col.append(j)
     
 counter = 0
 number_indices = []
@@ -39,8 +39,8 @@ for i in range(len(number_indices)):
         for line_index in dot_line:
             if number_indices[i][0] < line_index and number_indices[j][0] > line_index:
                 steps[-1] += 1
-        for row_index in dot_row:
-            if (number_indices[i][1] < row_index and number_indices[j][1] > row_index) or (number_indices[j][1] < row_index and number_indices[i][1] > row_index):
+        for col_index in dot_col:
+            if (number_indices[i][1] < col_index and number_indices[j][1] > col_index) or (number_indices[j][1] < col_index and number_indices[i][1] > col_index):
                 steps[-1] += 1
         j += 1
 
